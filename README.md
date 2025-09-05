@@ -148,10 +148,11 @@ El proyecto incluye una suite de tests unitarios configurada con Jest y React Te
 
 ### Configuración de Testing
 
-- **Jest**: Framework de testing con configuración optimizada para Next.js
+- **Jest**: Framework de testing con configuración ES modules optimizada para Next.js 15
 - **React Testing Library**: Utilidades para testing de componentes React
 - **@testing-library/jest-dom**: Matchers adicionales para Jest
 - **@types/jest**: Definiciones de tipos para Jest
+- **Configuración**: `jest.config.mjs` con soporte completo para ES modules
 
 ### Tests Implementados
 
@@ -185,6 +186,8 @@ npm run test:coverage
 - **17 tests** ejecutándose exitosamente
 - **2 suites de test** principales
 - **Cobertura completa** de hooks críticos del sistema
+- **Type safety** completo con eliminación de tipos `any`
+- **Compatibilidad** con Next.js 15 y ES modules
 
 ## 📦 Build y Deploy
 
@@ -201,8 +204,9 @@ npm run build
 - **Estado**: Las respuestas se mantienen durante toda la sesión usando Context API
 - **Performance**: Optimización de imágenes con Next.js Image
 - **SEO**: Metadatos configurados para cada página
-- **Testing**: Suite de tests unitarios con Jest y React Testing Library
+- **Testing**: Suite de tests unitarios con Jest (ES modules) y React Testing Library
 - **Calidad de Código**: Configuración de ESLint y TypeScript para mantener estándares
+- **Build**: Optimizado para producción con Next.js 15 y Suspense boundaries
 
 ## 📄 Licencia
 
