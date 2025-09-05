@@ -65,7 +65,7 @@ La aplicación categoriza a los usuarios en tres grupos basados en sus condicion
 
 1. **Clonar el repositorio**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/garciariquelme-mac/choiz-challenge.git
    cd choiz-challenge
    ```
 
