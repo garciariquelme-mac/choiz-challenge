@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Button from "./Button";
 import { RecommendationCardProps } from "../../types";
 
@@ -15,9 +16,11 @@ export default function RecommendationCard({
     >
       {recommendation.image && (
         <div>
-          <img
+          <Image
             src={recommendation.image}
             alt={recommendation.title}
+            width={400}
+            height={300}
             className="w-full h-full object-cover"
           />
           <div className="absolute top-3 left-3">

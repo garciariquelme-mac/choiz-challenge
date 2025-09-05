@@ -28,7 +28,7 @@ export function useQuestionForm({
     },
     mode: 'onChange',
     resolver: (values) => {
-      const errors: Record<string, any> = {};
+      const errors: Record<string, { type: string; message: string }> = {};
 
       // Validación de opciones exclusivas
       const exclusiveSelected = values.selectedOptions.filter(optId => 
