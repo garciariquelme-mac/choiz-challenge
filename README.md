@@ -18,6 +18,7 @@ Prueba técnica desarrollada con Next.js que permite a los usuarios completar un
 - **Formularios**: React Hook Form con validaciones personalizadas
 - **Estado**: React Context API
 - **Imágenes**: Next.js Image Optimization
+- **Testing**: Jest, React Testing Library, @testing-library/jest-dom
 - **Linting**: ESLint con configuración Next.js
 
 ## 📁 Estructura del Proyecto
@@ -100,6 +101,11 @@ npm run dev
 # Construcción para producción
 npm run build
 
+# Testing
+npm test
+npm run test:watch
+npm run test:coverage
+
 # Linting
 npm run lint
 ```
@@ -138,12 +144,47 @@ Los tipos están organizados en archivos individuales dentro de `src/types/`:
 
 ## 🧪 Testing
 
+El proyecto incluye una suite de tests unitarios configurada con Jest y React Testing Library.
+
+### Configuración de Testing
+
+- **Jest**: Framework de testing con configuración optimizada para Next.js
+- **React Testing Library**: Utilidades para testing de componentes React
+- **@testing-library/jest-dom**: Matchers adicionales para Jest
+- **@types/jest**: Definiciones de tipos para Jest
+
+### Tests Implementados
+
+#### `useTreatmentRecommendation`
+Tests completos para el hook de categorización de tratamientos:
+- ✅ **Caso 1**: Usuario sin condiciones médicas (3 tests)
+- ✅ **Caso 2**: Usuario con condiciones médicas generales (3 tests)  
+- ✅ **Caso 3**: Usuario con cáncer de mama/próstata (4 tests)
+
+#### `useRecommendationPage`
+Tests completos para el hook de la página de recomendaciones:
+- ✅ **Estado inicial**: Inicialización y filtrado de tratamientos (2 tests)
+- ✅ **Selección de tratamiento**: Manejo de selección y cierre de secciones (2 tests)
+- ✅ **Navegación**: Navegación a última pregunta (1 test)
+- ✅ **Categorías**: Diferentes tipos de tratamientos (2 tests)
+
+### Comandos de Testing
+
 ```bash
+# Ejecutar todos los tests
+npm test
 
-npm run test
+# Ejecutar tests en modo watch
+npm run test:watch
 
+# Generar reporte de cobertura
 npm run test:coverage
 ```
+
+### Cobertura Actual
+- **17 tests** ejecutándose exitosamente
+- **2 suites de test** principales
+- **Cobertura completa** de hooks críticos del sistema
 
 ## 📦 Build y Deploy
 
@@ -160,6 +201,8 @@ npm run build
 - **Estado**: Las respuestas se mantienen durante toda la sesión usando Context API
 - **Performance**: Optimización de imágenes con Next.js Image
 - **SEO**: Metadatos configurados para cada página
+- **Testing**: Suite de tests unitarios con Jest y React Testing Library
+- **Calidad de Código**: Configuración de ESLint y TypeScript para mantener estándares
 
 ## 📄 Licencia
 
