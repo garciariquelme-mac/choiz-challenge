@@ -4,9 +4,9 @@ import { QuestionWizard, Header } from '@/components';
 import { questions } from '@/types';
 import { useQuestionWizard } from '@/hooks';
 import { useSearchParams } from 'next/navigation';
-import React from 'react';
+import React, { Suspense } from 'react';
 
-export default function TestPage() {
+function MedicalEvaluationContent() {
   const searchParams = useSearchParams();
   const questionParam = searchParams.get('question');
   
@@ -34,5 +34,13 @@ export default function TestPage() {
         />
       </div>
     </div>
+  );
+}
+
+export default function TestPage() {
+  return (
+    <Suspense fallback={<div className="h-screen bg-white flex items-center justify-center">Cargando...</div>}>
+      <MedicalEvaluationContent />
+    </Suspense>
   );
 }

@@ -36,7 +36,7 @@ describe('useTreatmentRecommendation', () => {
     it('debería retornar "no_medical_conditions" cuando medical_conditions es undefined', () => {
       
       const mockAnswers: Record<string, UserAnswer> = {
-        medical_conditions: undefined as any
+        medical_conditions: undefined as unknown as UserAnswer
       };
 
       const { result } = renderHook(() => useTreatmentRecommendation({ answers: mockAnswers }));
