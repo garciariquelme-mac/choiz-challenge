@@ -69,23 +69,16 @@ export function useQuestionWizard({
   }, [currentIndex, totalSteps]);
 
   return {
-    // Estado actual
     currentQuestion,
     currentIndex,
     initialAnswer,
     answers,
-    
-    // Información del progreso
     totalSteps,
     progress: getProgress,
-    
-    // Estados booleanos
     isFirstStep,
     isLastStep,
     canGoBack,
     canGoNext,
-    
-    // Acciones
     handleAnswer,
     handleNext,
     handleBack,

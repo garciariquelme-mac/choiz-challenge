@@ -32,15 +32,12 @@ export function useRecommendationPage() {
   };
 
   return {
-    // Estado
     answers,
     hasAnswers,
     treatmentCategory,
     recommendedTreatments,
     showAnswersSection,
     selectedTreatment,
-    
-    // Acciones
     handleTreatmentSelect,
     handleCloseAnswersSection,
     handleBackToLastQuestion,

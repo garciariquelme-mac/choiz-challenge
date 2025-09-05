@@ -100,9 +100,6 @@ npm run dev
 # Construcción para producción
 npm run build
 
-# Iniciar servidor de producción
-npm run start
-
 # Linting
 npm run lint
 ```
@@ -142,10 +139,9 @@ Los tipos están organizados en archivos individuales dentro de `src/types/`:
 ## 🧪 Testing
 
 ```bash
-# Ejecutar tests (cuando estén implementados)
+
 npm run test
 
-# Coverage
 npm run test:coverage
 ```
 
